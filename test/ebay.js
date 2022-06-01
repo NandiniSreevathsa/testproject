@@ -2,7 +2,7 @@ const homepage = require('../pageobject/homepage')
 const path = require('path')
 
 
-describe('Login to ebay website', function() {
+describe.only('Login to ebay website', function() {
     beforeEach(function() {
         var baseurl = 'https://www.ebay.com/'
         homepage.go_to_url(baseurl)
@@ -27,7 +27,7 @@ describe('Saved items', function() {
     });
 });
 
-describe.only('Empty cart', function() {
+describe('Empty cart', function() {
     beforeEach(function() {
         var baseurl = 'https://www.ebay.com/'
         homepage.go_to_url(baseurl)
