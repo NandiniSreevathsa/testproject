@@ -2,7 +2,7 @@ const homepage = require('../pageobject/homepage')
 const path = require('path')
 
 
-describe.only('Login to ebay website', function() {
+describe('Login to ebay website', function() {
     beforeEach(function() {
         var baseurl = 'https://www.ebay.com/'
         homepage.go_to_url(baseurl)
@@ -27,7 +27,7 @@ describe('Saved items', function() {
     });
 });
 
-describe('Empty cart', function() {
+describe.only('Empty cart', function() {
     beforeEach(function() {
         var baseurl = 'https://www.ebay.com/'
         homepage.go_to_url(baseurl)
@@ -35,7 +35,7 @@ describe('Empty cart', function() {
     });
 
     it('should click on cart and display message', function() {
-        homepage.clickCartAndVerifyMessage("You don't have any items in your cart.")
+        homepage.clickCartAndVerifyMessage("You don't have any items in your cart. Let's get shopping!")
         homepage.quit()
     });
 });
